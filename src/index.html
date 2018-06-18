@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <link rel="stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,6 +9,21 @@
     <meta name="description" content="">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">Hello </div>
+    <div id="myDIV" class="header">
+      <p align="left" id="date"></p>
+      <h2>To-Do App</h2>
+      <input type="text" id="myInput" placeholder="Title...">
+      <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+    
+    <ul id="myUL">
+      <li class="checked">Watch World Cup</li>
+      <li id="nick">Read a novel</li>
+      <li>Attend lectures</li>
+      <li>Text Diana</li>
+      <li>Head to Cafe Javas</li>
+      <li>Spend some money</li>
+    </ul>
   </body>
 </html>
