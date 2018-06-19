@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Summer School Simple Todos</title>
-    <meta name="description" content="">
+      <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </head>
   </head>
   <body>
-    <div id="app"></div>
+      <div class="container">
+          
+          
+          <p>Please add your task:
+            <a href="#">
+              <span class="glyphicon glyphicon-plus-sign"></span>
+            </a>
+         
+      <form>
+         <table> 
+           <tr><label>Add task</lable> <input type="text" name="task" id="task"></br></br></br></tr>
+            <tr><div>
+                <tr><label>Time</label><input id="time" type="time"></br></br></br></tr>
+                <label for="task">Select time for your task:</label>
+                <input type="date" id="time" name="bday">
+              </div></tr></br></br></br>
+           <tr> Describe your task today :<br>
+             <textarea  cols="10" rows="10" style="height: 200px; width: 900px;" id="des">Type your description of the task here</textarea></tr>
+      <tr></tr></br>
+      <tr></tr></br>
+      <br><br>
+      <tr>
+      <input id = "button" type = "button" value = " Reset ">&nbsp;&nbsp;&nbsp;
+      <input id = "button1" type = "button" value = " Add ">&nbsp;&nbsp;&nbsp;
+      <input id = "button2" type = "button" value = " Update "></tr>
+     </table>
+            </form>
+    
+            <h3>List Of Tasks</h3>
+            <div id = "tab">
+                    <table id = "list" cellspacing = "0px" cellpadding = "20px" text-align = "center">
+                        <thead>
+                            <tr>
+                                <td>Task</td>
+                                <td>Time</td>
+                                <td>Description</td>
+                              </tr>
+                        </thead>
+            
+                        <tbody>
+            
+                        </tbody>
+                    </table>
+            </div>
+
   </body>
 </html>
