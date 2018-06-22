@@ -3,4 +3,4 @@ module.exports = {
   npm: {
     esModules: true
   }
-}
+};

@@ -1,8 +1,9 @@
-require('./styles.css');
+ require ('./styles.css');
 
 const app = document.querySelector('#app');
 
 app.innerHTML = '<h2>Welcome to summer-school-simple-todos</h2>';
+
 function time(h, m) {
   const hours = new Date().getHours() + h;
   const minutes = new Date().getMinutes() + m;
@@ -32,7 +33,7 @@ const tasks = [
 
 
 function addArray() {
-  for (let i = 0; i < tasks.length; i + 1) {
+  for (let i = 0; i < tasks.length; i += 1) {
     const list = document.createElement('li');
     const t = document.createTextNode(`${tasks[i].name} ${tasks[i].description} ${tasks[i].state} ${tasks[i].time}`);
     list.appendChild(t);
