@@ -4,105 +4,62 @@ const app = document.querySelector("#app");
 
 app.innerHTML = "<h2></h2>";
 
-const tasks = [
-  {
-    key: "value",
-  },
-];
-const datefunc = function date() {
-  return `${new Date().getMonth().toString()}: ${new Date().getDate().toString()}: ${new Date().getFullYear().toString()}`;
-};
-
-const tasksArray = [
-  {
-    name: "Peter",
-    date: datefunc(),
-    description: "Go to Russia",
-    status: "Active",
-  },
-  {
-    name: "Martin",
-    date: datefunc(),
-    description: "Go to USA",
-    status: "Pending",
-  },
-  {
-    name: "Steve",
-    date: datefunc(),
-    description: "Show her some love",
-    status: "Very Active",
-  },
-  {
-    name: "Peter",
-    date: datefunc(),
-    description: "Go to Russia",
-    status: "Active",
-  },
-  {
-    name: "Peter",
-    date: datefunc(),
-    description: "Go to Russia",
-    status: "Active",
-  },
-  {
-    name: "Quttos",
-    date: datefunc(),
-    description: "Go to Russia",
-    status: "Active",
-  },
-  {
-    name: "Kevin",
-    date: datefunc(),
-    description: "Go to Russia",
-    status: "Active",
-  },
-  {
-    name: "DeBruyne",
-    date: datefunc(),
-    description: "Go to Russia",
-    status: "Active",
-  },
-];
-
-for (let i = 0; i < tasksArray.length; i += 1) {
-  const li = document.createElement("li");
-  const a = document.createElement("a");
-  const baby = document.createTextNode(`NAME: ${tasksArray[i].name}       DATE: ${tasksArray[i].date}        DESCRIPTION: ${tasksArray[i].description}       STATUS: ${tasksArray[i].status}`);
-  a.appendChild(baby);
-  li.appendChild(a);
-  document.getElementById("myUL").appendChild(li);
+function time(h, m) {
+  const hours = new Date().getHours() + h;
+  const minutes = new Date().getMinutes() + m;
+  return `${hours.toString()}:${minutes.toString()}`;
 }
 
-document.getElementById("button").addEventListener("click", () => {
-  const taskValue = document.getElementById("task").nodeValue;
-  const timeValue = document.getElementById("time").nodeValue.toString;
-  const dateValue = document.getElementById("date").nodeValue.toString;
-  const desValue = document.getElementById("des").nodeValue;
+const tasks = [
+  {
+    name: "Play Fifa",
+    description: "Have to kill Alaka",
+    state: " active ",
+    time: time(3, 1),
+  },
+  {
+    name: "go to doctor",
+    description: "Malaria",
+    state: "very active",
+    time: (2, 2),
+  },
+  {
+    name: "call my boss",
+    description: "wotk schedule",
+    state: "very active",
+    time: time(1, 2),
+  },
+];
 
-  const task = {
-    name: taskValue,
-    time: timeValue,
-    date: dateValue,
-    description: desValue,
+function addArray() {
+  for (let i = 0; i < tasks.length; i += 1) {
+    const list = document.createElement("li");
+    const a = document.createElement("a");
+    const t = document.createTextNode(`${tasks[i].name} ${tasks[i].description} ${tasks[i].state} ${tasks[i].time}`);
+    list.appendChild(a);
+    a.appendChild(t);
+    document.getElementById("myUL").appendChild(list);
+  }
+}
+
+addArray();
+
+function addTask() {
+  const name = document.getElementById("task").value;
+  const description = document.getElementById("des").value;
+  const timee = document.getElementById("time").value;
+  const state = document.getElementById("state").value;
+
+  const b = {
+    name,
+    description,
+    state,
+    time: timee,
   };
 
-  list = document.createElement("li");
-  text = document.createTextNode();
-});
+  tasks.push(b);
+  addArray();
+}
 
+document.getElementById("button1").addEventListener("click", addTask);
 
-// var date = new Date();
-// var task1 = new task("Peter", date, "My Description", "Active");
-
-tasks.push("key1", task1);
-li = document.createElement("li");
-baby = document.createTextNode(task1.name + task1.description + task1.status);
-li.appendChild(baby);
-document.getElementById("myUL").appendChild(li);
-
-document.getElementById("nick").style.color = "red";
-const n = new Date();
-y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
-document.getElementById("date").innerHTML = `${m}/${d}/${y}`;
