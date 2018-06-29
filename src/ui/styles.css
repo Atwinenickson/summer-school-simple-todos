@@ -1,0 +1,332 @@
+
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+    margin: 0;
+    padding:0;
+}
+
+/* Style the list items */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+li.checked.addBtn
+li .checked
+
+.close:hover {
+    background-color: #A2AB58;
+    color: white;
+}
+
+/* Style the header */
+.header {
+    background-color: #3CB371;
+    padding: 30px 40px;
+    color: #f9f9f9;;
+    text-align: center;
+}
+
+
+
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 20%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+/* Style the list items */
+/*ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /* make the list items unselectable */
+  /*  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+*/
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+/*
+body{
+background-image: url(bgimage.jpg);
+}
+*/
+
+body{
+    background: -webkit-linear-gradient(45deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 49%, rgba(0,0,0,0.1) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0) 51%, rgba(0,0,0,0) 100%), -webkit-linear-gradient(-45deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 49%, rgba(0,0,0,0.5) 49%, rgba(0,0,0,0.5) 51%, rgba(0,0,0,0.5) 51%, rgba(0,0,0,0) 51%, rgba(0,0,0,0) 100%);
+    background: -moz-linear-gradient(45deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 49%, rgba(0,0,0,0.1) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0) 51%, rgba(0,0,0,0) 100%), -moz-linear-gradient(135deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 49%, rgba(0,0,0,0.5) 49%, rgba(0,0,0,0.5) 51%, rgba(0,0,0,0.5) 51%, rgba(0,0,0,0) 51%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(45deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 49%, rgba(0,0,0,0.1) 49%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0.1) 51%, rgba(0,0,0,0) 51%, rgba(0,0,0,0) 100%), linear-gradient(135deg, rgba(0,0,0,0) 0, rgba(0,0,0,0) 49%, rgba(0,0,0,0.5) 49%, rgba(0,0,0,0.5) 51%, rgba(0,0,0,0.5) 51%, rgba(0,0,0,0) 51%, rgba(0,0,0,0) 100%);
+    background-position: -5px 0, 5px 0;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: 20px 10px;
+    background-size: 20px 10px;
+}
+
+#app{
+    color: #bbb;
+}
+
+
+
+
+
+
+#form{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+ }
+
+
+    .list-type1{
+        width:400px;
+        margin:0 auto;
+        }
+
+        .list-type1 ol{
+        counter-reset: li;
+        list-style: none;
+        *list-style: decimal;
+        font-size: 15px;
+        font-family: 'Raleway', sans-serif;
+        padding: 0;
+        margin-bottom: 4em;
+        }
+        .list-type1 ol ol{
+        margin: 0 0 0 2em;
+        }
+
+        .list-type1 a{
+        position: relative;
+        display: block;
+        padding: .4em .4em .4em 2em;
+        *padding: .4em;
+        margin: .5em 0;
+        background: #93C775;
+        color: #000;
+        text-decoration: none;
+        -moz-border-radius: .3em;
+        -webkit-border-radius: .3em;
+        border-radius: 10em;
+        transition: all .2s ease-in-out;
+        }
+
+        .list-type1 a:hover{
+        background: #d6d4d4;
+        text-decoration:none;
+        transform: scale(1.1);
+        }
+
+        .list-type1 a:before{
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        left: -1.3em;
+        top: 50%;
+        margin-top: -1.3em;
+        background:#93C775;
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+        border: .3em solid #fff;
+        text-align: center;
+        font-weight: bold;
+        -moz-border-radius: 2em;
+        -webkit-border-radius: 2em;
+        border-radius: 2em;
+        color:#FFF;
+        }
+
+
+
+.form-style-3{
+    max-width: 450px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-3 label{
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style-3 label > span{
+    float: left;
+    width: 100px;
+    color: rgb(127, 132, 122);
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #00FA9A;
+    padding: 20px;
+    background: #FFF4F4;
+    box-shadow: inset 0px 0px 15px #FFE5E5;
+    -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+    -webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.form-style-3 fieldset legend{
+    color: rgb(125, 128, 125);
+    border-top: 1px solid #98FB98;
+    border-left: 1px solid #98FB98;
+    border-right: 1px solid #98FB98;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #FFF4F4;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #F1F1F1;
+    -moz-box-shadow:-0px -1px 2px #F1F1F1;
+    -webkit-box-shadow:-0px -1px 2px #F1F1F1;
+    font-weight: normal;
+    font-size: 12px;
+}
+.form-style-3 textarea{
+    width:250px;
+    height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select,
+.form-style-3 textarea{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #98FB98;
+    outline: none;
+    color: rgb(60, 63, 60);
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #00FA9A;
+    -moz-box-shadow: inset 1px 1px 4px #00FA9A;
+    -webkit-box-shadow: inset 1px 1px 4px #00FA9A;
+    background: #FFEFF6;
+    width:50%;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+    background: #90EE90;
+    border: 1px solid #3CB371;
+    padding: 5px 15px 5px 15px;
+    color: #3a3434;
+    box-shadow: inset -1px -1px 3px #98FB98;
+    -moz-box-shadow: inset -1px -1px 3px #98FB98;
+    -webkit-box-shadow: inset -1px -1px 3px #98FB98;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+}
+.required{
+    color:rgb(243, 21, 32);
+    font-weight:normal;
+}
+
+input:invalid {
+    border: 2px dashed red;
+  }
+
+  input:valid {
+    border: 2px solid black;
+  }

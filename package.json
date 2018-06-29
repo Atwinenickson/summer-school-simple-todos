@@ -6,30 +6,31 @@
   "scripts": {
     "build": "nwb build-web-app",
     "clean": "nwb clean-app",
-    "start": "nwb serve-web-app --reload",
+    "start": "nwb serve-web-app --reload && tsc && npm run lint",
+    "lint": "tslint -c tslint.json '**/.ts' '**/.tsx' --exclude '**/node_modules/**'",
     "test": "nwb test",
     "test:coverage": "nwb test --coverage",
     "test:watch": "nwb test --server"
   },
-  
-"rules": {
-  "linebreak-style": 0,
-  "global-require": 0,
-  "eslint linebreak-style": [0, "error", "windows"]
-},
-
-
+  "rules": {
+    "linebreak-style": 0,
+    "global-require": 0,
+    "eslint linebreak-style": [
+      0,
+      "error",
+      "windows"
+    ]
+  },
   "dependencies": {
     "bootstrap": "^3.3.7"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.12.0",
-    "nwb": "0.21.x"
+    "nwb": "0.21.x",
+    "tslint": "^5.10.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "typescript": "^2.9.2"
   },
   "author": "",
   "license": "MIT",
   "repository": ""
-
 }

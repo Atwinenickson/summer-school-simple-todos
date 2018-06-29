@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-      <link rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Summer School Simple Todos</title>
     <meta name="description" content="">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   </head>
-  <body>
-    <div id="app">Hello </div>
+
+  <!--<body onload = date_time"(date_time)";>-->
+        <!--<span id="date_time" ></span>-->
+        <!--<body onload=display_ct();>
+                <span id='ct' ></span>-->
+                <body id="bdy">
+                <span id='ct' ></span>
+    <div id="app"></div>
+
     <div id="myDIV" class="header">
       <p align="left" id="date"></p>
       <h2>To-Do App</h2>
-      <input type="text" id="myInput" placeholder="Title...">
-     <button id="addtask"> Add</button>
-       <a id="addtask">
-          <span class="glyphicon glyphicon-plus-sign"></span>
-      </a>
+     <!-- <input type="text" id="myInput" placeholder="Title...">
+      <span class="addBtn" id="btn">Add</span> -->
     </div>
-    
-    <ul id="myUL">
-      <table> 
-     <tr> <li class="checked">Watch World Cup</li></tr>
-    <tr><li id="nick">Read a novel</li></tr>
-    <tr><li>Attend lectures</li></tr>
-     <tr> <li>Text Diana</li></tr>
-     <tr> <li>Head to Cafe Javas</li></tr>
-      <tr><li>Spend some money</li></tr>
-        </table>
-    </ul>
-    <button id="clear"> Clear</button>
 
-    <div class="form">
-      <h3>Add New Tak</h3>
-    <form id="myForm"> 
-        <label>Add task</lable> <input type="text" name="task" id="task"></br></br>
-        <label>Time</label><input id="time" type="time"></br></br></br>
-        <label for="task">Select state for your task:</label>
-             <select id="state">
-               <option></option>
-             <option >Very active</option>
-             <option >active</option>
-             <option >not active</option>
-             </select>
-        </br></br></br>
-        <label>Describe your task today</label> <br>
-          <textarea  cols="10" rows="10" style="height: 200px; width: 900px;" id="des"></textarea></tr>
-        </br>
-   
-   <input id = "button" type = "button" value = " Reset ">&nbsp;&nbsp;&nbsp;
-   <input id = "button1" type = "button" value = " Add ">&nbsp;&nbsp;&nbsp;
-   <input id = "button2" type = "button" value = " Update ">
-         </form>
-         </div>
-         <p id="demo"></p>
-      
+    <div  class="list-type1">
+      <ol id = "myUL">
+      </ol>
+      </div>
+
+
+      <div class="form-style-3" id="form">
+        <form name="forms">
+        <fieldset><legend>Overview</legend>
+        <label for="field3"><span>Name <span class="required">*</span></span><input type="text" required="true" id="task" class="input-field" name="field1" value="" /></label><br/>
+        <label for="field5"><span>Time <span class="required">*</span></span><input type="time" id="time" required="true" class="input-field" name="field1" value="" /></label><br/><br/>
+        <label for="field4"><span>Status</span><select id="state" name="field4"  required="true" class="select-field">
+        <option value="Active">Active</option>
+        <option value="Pending">Pending</option>
+        <option value="Done">Done</option>
+        </select></label>
+        </fieldset>
+        <fieldset><legend>Description</legend>
+        <label for="field6"><span>Description <span class="required">*</span></span><textarea name="field6"  required="true" id="des" class="textarea-field"></textarea></label>
+        <label><span>&nbsp;</span><input id = "button1" type="button" value="Submit" /></label>
+        </fieldset>
+        </form>
+        </div>
+
+
+
   </body>
 </html>
+
